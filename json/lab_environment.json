@@ -5,7 +5,6 @@
     },
     "universal_authentication" : {
         "universal_password" : "<enter value here>",
-        "universal_long_password" : "<enter value here>",
-        "vcenter_administrator_sso_login" : "administrator@vsphere.local"
+        "universal_long_password" : "<enter value here>"
     }
 }
