@@ -17,6 +17,8 @@ cp -r hesiod/python/ hesiod-dns/hesiod
 ```
 cd hesiod-dns/
 ```
+
+Edit the variables in `/usr/local/hesiod-dns/json/lab_environment.json` and run:
 ```
 python3 hesiod-dns.py
 ```
