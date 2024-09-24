@@ -14,8 +14,6 @@ import sys
 # Import json configuration parameters
 env_json_str = libjson.populate_var_from_json_file("json", "lab_environment.json")
 env_json_py = libjson.load_json_variable(env_json_str)
-vcf_json_str = libjson.populate_var_from_json_file("json", "vcf5_bringup_template.json")
-vcf_json_py = libjson.load_json_variable(vcf_json_str)
 this_script_name = os.path.basename(__file__)
 logfile_name = env_json_py["logs"][this_script_name]
 

@@ -1,36 +1,11 @@
 {
     "logs" : {
         "test.py" : "_test.log",
-        "hesiod-vcf5.py" : "_hesiod-dns.log"
+        "hesiod-dns.py" : "_hesiod-dns.log"
     },
-    "physical_network" : [{
-        "default_gateway" : "<enter value here>",
-        "subnet_mask" : "<enter value here>",
-        "cidr" : "<enter value here>",
-        "network_type" : "physical subnet"
-    }],
-
-    "physical_server" : [{
-        "username" : "root",
-        "password" : "<enter value here>",
-        "ip_address" : "<enter value here>",
-        "server_type" : "DNS Physical Resources"
-    }],
-    
     "universal_authentication" : {
         "universal_password" : "<enter value here>",
         "universal_long_password" : "<enter value here>",
         "vcenter_administrator_sso_login" : "administrator@vsphere.local"
-    },
-
-    "dns" : [
-        "<enter value here>",
-        "8.8.8.8"   
-    ],
-
-    "ntp" : {
-        "server" : "pool.ntp.org"
-    },
-
-    "domain" : "hesiod.local"
+    }
 }
