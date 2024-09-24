@@ -12,7 +12,7 @@ cd /usr/local/
 git clone https://github.com/boconnor2017/hesiod-dns
 ```
 ```
-cp -r hesiod/python/ hesiod-vcf5/hesiod
+cp -r hesiod/python/ hesiod-dns/hesiod
 ```
 ```
 cd hesiod-dns/
