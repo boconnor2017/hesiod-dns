@@ -1,7 +1,8 @@
 {
     "logs" : {
         "test.py" : "_test.log",
-        "hesiod-dns.py" : "_hesiod-dns.log"
+        "hesiod-dns.py" : "_hesiod-dns.log",
+        "hesiod-create-domain.py" : "_hesiod-create-domain.py"
     },
     "universal_authentication" : {
         "universal_password" : "<enter value here>"
