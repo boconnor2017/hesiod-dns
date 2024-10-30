@@ -89,3 +89,23 @@ def change_tanium_password(token, ip, new_password):
     api_response = requests.get(api_url)
     return api_response
 
+# Create DNS Zone
+def create_dns_zone(tanium_token, dns_ip, zone_name):
+    api_url = "http://"+dns_ip+":5380/api/zones/create?token="+tanium_token+"&zone="+zone_name+"&type=Primary"
+    api_response = requests.get(api_url)
+    return api_response
+
+# Create DNS Record
+def createdns_record(tanium_token, dns_ip, dns_record, dns_zone, ip_address, dns_type, dns_ttl, dns_overwrite, dns_ptr, dns_create_ptr_zone):
+    api_url = "http://"+dns_ip+":5380/api/zones/records/add?"
+    api_url = api_url+"token="+tanium_token
+    api_url = api_url+"&domain="+dns_record+"."+dns_zone
+    api_url = api_url+"&zone="+dns_zone
+    api_url = api_url+"&type="+dns_type
+    api_url = api_url+"&ttl="+dns_ttl
+    api_url = api_url+"&overwrite="+dns_overwrite
+    api_url = api_url+"&ipAddress="+ip_address
+    api_url = api_url+"&ptr="+dns_ptr
+    api_url = api_url+"&createPtrZone="+dns_create_ptr_zone
+    api_response = requests.get(api_url)
+    return api_response

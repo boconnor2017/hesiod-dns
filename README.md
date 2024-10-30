@@ -25,3 +25,5 @@ Edit the variables in `/usr/local/hesiod-dns/json/lab_environment.json` and run:
 ```
 python3 hesiod-dns.py
 ```
+
+Login to your DNS server using a browser. Enter `http://` the IP address of the Photon machine and `:5380`. Default username is `admin`. Password is whatever you set in your json file. 

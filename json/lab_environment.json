@@ -4,7 +4,18 @@
         "hesiod-dns.py" : "_hesiod-dns.log"
     },
     "universal_authentication" : {
-        "universal_password" : "<enter value here>",
-        "universal_long_password" : "<enter value here>"
-    }
+        "universal_password" : "<enter value here>"
+    },
+    "dns_zone" : "<enter value here>",
+    "dns_entries" : [
+        {
+            "domain_name" : "<enter value here>",
+            "ip_address" : "<enter value here>",
+            "type" : "A",
+            "ttl" : "3600", 
+            "overwrite" : "true",
+            "ptr" : "true",
+            "create_pointer_zone" : "true"
+        }
+    ]
 }
