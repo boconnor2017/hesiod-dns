@@ -8,6 +8,7 @@
         "universal_password" : "<enter value here>"
     },
     "dns_zone" : "<enter value here>",
+    "dns_ip_address" : "<enter value here>",
     "dns_entries" : [
         {
             "domain_name" : "<enter value here>",
