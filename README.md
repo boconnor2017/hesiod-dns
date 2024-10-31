@@ -31,5 +31,5 @@ Login to your DNS server using a browser. Enter `http://` the IP address of the 
 ## Creating the DNS Entries
 The `lab_environment.json` file contains all of the necessary information to build a DNS zone and DNS entries for your lab environment. When the json file is populated with appropriate DNS information, run the following:
 ```
- python3 hesiod-create-domain.py
+python3 hesiod-create-domain.py
 ```

@@ -28,12 +28,11 @@ err = ""
 liblog.write_to_logs(err, logfile_name)
 
 # Create DNS Zone
-tanium_token = dnslib.get_tanium_token("admin", env_json_py["universal_authentication"]["universal_password"], sys.argv[1])
-dns_zone = dnslib.create_dns_zone(tanium_token, sys.argv[1], env_json_py["dns_zone"])
-libgen.pause_python_for_duration(30)
+tanium_token = dnslib.get_tanium_token("admin", env_json_py["universal_authentication"]["universal_password"], env_json_py["dns_ip_address"])
+dns_zone = dnslib.create_dns_zone(tanium_token,  env_json_py["dns_ip_address"], env_json_py["dns_zone"])
 
 # Create DNS Records
 i=0
 while i < len(env_json_py["dns_entries"]):
-    dns_record = dnslib.createdns_record(tanium_token, sys.argv[1], env_json_py["dns_entries"][i]["domain_name"], dns_zone, env_json_py["dns_entries"][i]["ip_address"], env_json_py["dns_entries"][i]["type"], env_json_py["dns_entries"][i]["ttl"], env_json_py["dns_entries"][i]["overwrite"], env_json_py["dns_entries"][i]["ptr"], env_json_py["dns_entries"][i]["create_pointer_zone"])
+    dns_record = dnslib.createdns_record(tanium_token,  env_json_py["dns_ip_address"], env_json_py["dns_entries"][i]["domain_name"], env_json_py["dns_zone"], env_json_py["dns_entries"][i]["ip_address"], env_json_py["dns_entries"][i]["type"], env_json_py["dns_entries"][i]["ttl"], env_json_py["dns_entries"][i]["overwrite"], env_json_py["dns_entries"][i]["ptr"], env_json_py["dns_entries"][i]["create_pointer_zone"])
     i=i+1
