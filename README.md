@@ -33,3 +33,18 @@ The `lab_environment.json` file contains all of the necessary information to bui
 ```
 python3 hesiod-create-domain.py
 ```
+
+### Bug Fix
+Run the following steps manually after the first time creating your DNS:
+1. Login to Tanium at http://<tanium_ip_address>:5380 using admin and password from `lab_environment.json`
+2. Click the `Zones` tab and click the zone from `lab_environment.json`
+3. Click `Add Record`
+    * Name: `@` (default)
+    * Type: `A` (default)
+    * TTL : `3600` (default)
+    * IPv4 Address: `<enter the tanium ip address>`
+    * Add Reverse (PTR) record: `yes`
+    * Create reverse zone for PTR record: `yes`
+    * Overwrite existing records: `yes` (optional but recommended)
+    * Comments: `bug fix`
+4. Click `Save`
