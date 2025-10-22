@@ -3,7 +3,6 @@ Uses [Project Hesiod](https://github.com/boconnor2017/hesiod), a Photon based ap
 
 ## Prerequisites
 1. Deploy a [Hesiod Node](https://github.com/boconnor2017/hesiod?tab=readme-ov-file#deploy-hesiod-nodes). Run all remaining steps on this node.
-2. Edit the `lab_environment.json` file with appropriate credential information for your DNS server. *Optional but recommended: save the configuration to `/usr/local/drop/ and copy when needed.*
 
 # Quick Start
 *Recommended: run these scripts as root.*
